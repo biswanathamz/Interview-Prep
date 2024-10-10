@@ -1,0 +1,12 @@
+1. Variable numbers of player should play the game. (User's Decision)
+2. Size of board should not be same. (User's Decision)
+3. Number of ladder should not be static.  (User's Decision)
+4. Number of snake should not be static.  (User's Decision)
+5. There can be multiple dice. (User's Decision)
+6. Log Information. (Syatem's Functionality)
+7. Randomly computer select who can start the game. (Syatem's Decision)
+8. Snake and ladder should not create a loop. (Syatem's Decision)
+9. Game should have start and end state. (Syatem's Decision)
+
+
+Class Diagram : https://drive.google.com/file/d/1W3blsFI4AGjPqiH6YEYzhouwhG6Fleeu/view?usp=sharing
