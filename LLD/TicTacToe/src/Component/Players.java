@@ -8,11 +8,11 @@ import lombok.Setter;
 public class Players {
     private int playerId;
     private String playerName;
-    private Symbol selectedSymbol;
+    private PlayingPiece selectedPlayingPiece;
 
-    public Players(int playerId, String playerName, Symbol selectedSymbol){
+    public Players(int playerId, String playerName, PlayingPiece selectedPlayingPiece){
         this.playerId = playerId;
         this.playerName = playerName;
-        this.selectedSymbol = selectedSymbol;
+        this.selectedPlayingPiece = selectedPlayingPiece;
     }
 }
