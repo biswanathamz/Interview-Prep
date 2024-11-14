@@ -15,6 +15,12 @@ public class Main {
                 case 1:
                     managePasswordObj.takeInputForNewPassword();
                     break;
+                case 2:
+                    managePasswordObj.viewAPassword();
+                    break;
+                case 3:
+                    managePasswordObj.allWebsiteList();
+                    break;
                 case 6:
                     varExit = false;
                     break;
