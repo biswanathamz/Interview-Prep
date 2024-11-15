@@ -59,7 +59,6 @@ public class ManagePassword {
         }
     }
 
-
     public void takeInputForNewPassword(){
         try{
             System.out.println("Please Enter the Website name : ");
@@ -87,6 +86,36 @@ public class ManagePassword {
                 System.out.println("Failed to save password data.");
             }
 
+        }catch (InputMismatchException e) {
+            System.out.println("Invalid input, please try again.");
+        } catch (NullPointerException e) {
+            System.out.println("Null value encountered, please ensure all inputs are valid.");
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
+
+    public void updatePassword(){
+        try{
+            boolean updateFoundFlag = false;
+            System.out.println("Please enter the website name to update it's password");
+            String varWebsiteName = scannerObj.nextLine();
+            List<PasswordInfo> passwordInfoList = new ArrayList<>();
+            passwordInfoList = fileOperation.fetchAllPassword();
+            for (PasswordInfo passwordInfo : passwordInfoList){
+                if(Objects.equals(passwordInfo.getWebsiteName(), varWebsiteName)){
+                    System.out.println("Please enter the new password : ");
+                    String varPassword = scannerObj.nextLine();
+                    passwordInfo.getPasswordData().setPassword(varPassword);
+                    passwordInfo.getPasswordData().setModifiedAt(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+                    updateFoundFlag = true;
+                }
+            }
+            if(updateFoundFlag){
+                fileOperation.storePasswordData(passwordInfoList);
+            }else{
+                System.out.println("No matching website name found.");
+            }
         }catch (InputMismatchException e) {
             System.out.println("Invalid input, please try again.");
         } catch (NullPointerException e) {

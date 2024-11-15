@@ -21,6 +21,9 @@ public class Main {
                 case 3:
                     managePasswordObj.allWebsiteList();
                     break;
+                case 4:
+                    managePasswordObj.updatePassword();
+                    break;
                 case 6:
                     varExit = false;
                     break;
