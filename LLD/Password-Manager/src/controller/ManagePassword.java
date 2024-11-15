@@ -17,8 +17,12 @@ public class ManagePassword {
 
     public void allWebsiteList(){
         try{
-            List<PasswordInfo> passwordInfoList =  fileOperation.getAllPassword();
             List<String> websiteNames = new ArrayList<>();
+            List<PasswordInfo> passwordInfoList =  fileOperation.getAllPassword();
+            if(passwordInfoList==null){
+                System.out.println("There are No Password available!");
+                return;
+            }
             for (PasswordInfo passwordInfo : passwordInfoList){
                 websiteNames.add(passwordInfo.getWebsiteName());
             }
@@ -41,9 +45,13 @@ public class ManagePassword {
     public void viewAPassword(){
         try{
             PasswordInfo viewPasswordInfo = null;
+            List<PasswordInfo> passwordInfoList =  fileOperation.getAllPassword();
+            if(passwordInfoList==null){
+                System.out.println("There are No Password available!");
+                return;
+            }
             System.out.println("Please enter the Website name : ");
             String varWebsiteName = this.scannerObj.nextLine();
-            List<PasswordInfo> passwordInfoList =  fileOperation.getAllPassword();
             for (PasswordInfo passwordInfo : passwordInfoList){
                 if(Objects.equals(passwordInfo.getWebsiteName(), varWebsiteName)){
                     viewPasswordInfo = passwordInfo;
@@ -98,10 +106,13 @@ public class ManagePassword {
     public void updatePassword(){
         try{
             boolean updateFoundFlag = false;
+            List<PasswordInfo> passwordInfoList =  fileOperation.getAllPassword();
+            if(passwordInfoList==null){
+                System.out.println("There are No Password available!");
+                return;
+            }
             System.out.println("Please enter the website name to update it's password");
             String varWebsiteName = scannerObj.nextLine();
-            List<PasswordInfo> passwordInfoList = new ArrayList<>();
-            passwordInfoList = fileOperation.fetchAllPassword();
             for (PasswordInfo passwordInfo : passwordInfoList){
                 if(Objects.equals(passwordInfo.getWebsiteName(), varWebsiteName)){
                     System.out.println("Please enter the new password : ");

@@ -43,6 +43,12 @@ public class Main {
         System.out.println("Please Enter 5 to Delete a Password");
         System.out.println("Please Enter 6 to close");
         Scanner scannerObj = new Scanner(System.in);
-        return Integer.parseInt(scannerObj.nextLine());
+        int mainMenuInput = 0;
+        try{
+            mainMenuInput =  Integer.parseInt(scannerObj.nextLine());
+        }catch (NumberFormatException e){
+            printMainMenu(true);
+        }
+        return mainMenuInput;
     }
 }

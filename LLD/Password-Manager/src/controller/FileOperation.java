@@ -24,7 +24,7 @@ public class FileOperation {
     }
 
     public List<PasswordInfo> fetchAllPassword() throws IOException {
-        List<PasswordInfo> passwordInfoList = new ArrayList<>();
+        List<PasswordInfo> passwordInfoList = null;
         if (Files.exists(Paths.get(FILE_PATH)) && Files.size(Paths.get(FILE_PATH)) > 0) {
             FileReader reader = new FileReader(FILE_PATH);
             Gson gson = new Gson();
@@ -33,8 +33,6 @@ public class FileOperation {
 
             passwordInfoList = gson.fromJson(reader, listType);
             reader.close();
-        } else {
-            System.out.println("File does not exist or is empty.");
         }
         return passwordInfoList;
     }
@@ -76,11 +74,14 @@ public class FileOperation {
         List<PasswordInfo> passwordInfoList = null;
         try {
             passwordInfoList = fetchAllPassword();
+            if(passwordInfoList==null){
+                passwordInfoList = new ArrayList<>();
+            }
+            passwordInfoList.add(passwordInfo);
         } catch (IOException e) {
             System.out.println("Error reading data from file: " + e.getMessage());
         }
         assert passwordInfoList != null;
-        passwordInfoList.add(passwordInfo);
         storePasswordData(passwordInfoList);
         return true;
     }
