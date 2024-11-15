@@ -47,7 +47,7 @@ public class FileOperation {
         return passwordInfoList;
     }
 
-    public void storePasswordData (List<PasswordInfo> passwordInfoList){
+    public boolean storePasswordData (List<PasswordInfo> passwordInfoList){
         Gson gson = new Gson();
         JsonArray jsonArray = new JsonArray();
         for (PasswordInfo existingPasswordInfo : passwordInfoList) {
@@ -58,8 +58,10 @@ public class FileOperation {
         }
         try (FileWriter writer = new FileWriter(FILE_PATH, false)) {
             gson.toJson(jsonArray, writer);
+            return true;
         }catch (IOException e) {
             System.out.println("Error saving data to file: " + e.getMessage());
+            return false;
         }
     }
 

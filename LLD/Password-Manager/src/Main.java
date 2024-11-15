@@ -24,6 +24,9 @@ public class Main {
                 case 4:
                     managePasswordObj.updatePassword();
                     break;
+                case 5:
+                    managePasswordObj.deletePassword();
+                    break;
                 case 6:
                     varExit = false;
                     break;

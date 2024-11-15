@@ -31,7 +31,12 @@ public class ManagePassword {
                 System.out.println(websiteName);
             }
             System.out.println("Do you want to see password of any of the website? 1 for Yes else back to main menu.");
-            int allWebsiteListOption = Integer.parseInt(scannerObj.nextLine());
+            int allWebsiteListOption = 0;
+            try{
+                allWebsiteListOption = Integer.parseInt(scannerObj.nextLine());
+            }catch (NumberFormatException e){
+                return;
+            }
             if(allWebsiteListOption==1){
                 viewAPassword();
             }else {
@@ -108,7 +113,7 @@ public class ManagePassword {
             boolean updateFoundFlag = false;
             List<PasswordInfo> passwordInfoList =  fileOperation.getAllPassword();
             if(passwordInfoList==null){
-                System.out.println("There are No Password available!");
+                System.out.println("There are No Password available to update!");
                 return;
             }
             System.out.println("Please enter the website name to update it's password");
@@ -123,9 +128,49 @@ public class ManagePassword {
                 }
             }
             if(updateFoundFlag){
-                fileOperation.storePasswordData(passwordInfoList);
+                if(fileOperation.storePasswordData(passwordInfoList)){
+                    System.out.println("Password updated successfully.");
+                }else{
+                    System.out.println("Unable to update the password.");
+                }
             }else{
                 System.out.println("No matching website name found.");
+            }
+        }catch (InputMismatchException e) {
+            System.out.println("Invalid input, please try again.");
+        } catch (NullPointerException e) {
+            System.out.println("Null value encountered, please ensure all inputs are valid.");
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
+
+    public void deletePassword(){
+        List<PasswordInfo> passwordInfoList =  fileOperation.getAllPassword();
+        if(passwordInfoList==null){
+            System.out.println("There are No Password available to delete!");
+            return;
+        }
+        try{
+            Iterator<PasswordInfo> passwordInfoIterator = passwordInfoList.iterator();
+            System.out.println("Please enter the website name to delete");
+            String varWebsiteName = scannerObj.nextLine();
+            boolean deleteFlag = false;
+            while (passwordInfoIterator.hasNext()){
+                PasswordInfo passwordInfo = passwordInfoIterator.next();
+                if(Objects.equals(passwordInfo.getWebsiteName(), varWebsiteName)){
+                    passwordInfoIterator.remove();
+                    deleteFlag = true;
+                }
+            }
+            if(deleteFlag){
+                if(fileOperation.storePasswordData(passwordInfoList)){
+                    System.out.println("Password deleted for : "+varWebsiteName);
+                }else{
+                    System.out.println("System Error unable to delete the website's password.");
+                }
+            }else{
+                System.out.println("No website found with the given name to delete.");
             }
         }catch (InputMismatchException e) {
             System.out.println("Invalid input, please try again.");
