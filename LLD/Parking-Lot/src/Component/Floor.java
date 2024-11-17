@@ -36,6 +36,7 @@ public class Floor {
             spotListTruck.add(spot);
         }
     }
+
     public BookingSlip bookSpot(Vehicle vehicle){
         BookingSlip bookingSlip = new BookingSlip();
         List<Spot> varList = null;
@@ -56,8 +57,33 @@ public class Floor {
             if(spot.isAvailable){
                 bookingSlip.setSpotNumber(spot.bookSpot());
                 bookingSlip.setLevelNumber(this.levelNumber);
+                bookingSlip.setVehicleType(vehicle.vehicleType);
             }
         }
         return bookingSlip;
+    }
+
+    public boolean releaseBooking(VehicleType vehicleType, int spotId){
+        List<Spot> varList = null;
+        switch (vehicleType){
+            case CAR:
+                varList = this.spotListCar;
+                break;
+            case BIKE:
+                varList = this.spotListBike;
+                break;
+            case TRUCK:
+                varList = this.spotListTruck;
+                break;
+            default:
+                break;
+        }
+        for (Spot spot : varList){
+            if(spot.id==spotId && !spot.isAvailable){
+                spot.releaseSpot();
+                return true;
+            }
+        }
+        return false;
     }
 }
