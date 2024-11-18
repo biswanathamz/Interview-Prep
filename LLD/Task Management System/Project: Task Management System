@@ -1,0 +1,67 @@
+Project: Task Management System
+Description
+A Task Management System allows users to manage tasks for a team or an individual. It includes creating, updating, deleting, and viewing tasks. Notifications are sent asynchronously using Kafka when a task is created or its status is updated.
+
+Functional Requirements
+Task Management APIs:
+
+Create Task: Add a new task to the system.
+Retrieve Tasks: Fetch all tasks or filter tasks by status (e.g., pending, completed).
+Update Task Status: Update a task's status.
+Delete Task: Remove a task from the system.
+Database:
+
+Store tasks with fields like task_id, title, description, assigned_to, due_date, status, and priority.
+Kafka Integration:
+
+Produce notifications when a task is created or status changes.
+Consume notifications to log updates or send messages to users asynchronously.
+Exception Handling:
+
+Validate inputs such as missing title or invalid due_date.
+Handle database connectivity errors gracefully.
+Multithreading:
+
+Use threads to process bulk tasks (e.g., updating the status of many tasks simultaneously).
+MVC Architecture:
+
+Implement the system with clean separation of Controller, Service, and Repository layers.
+Technical Requirements
+API Endpoints:
+
+POST /api/tasks – Create a new task.
+GET /api/tasks – Retrieve all tasks or filter by query parameters (e.g., status=completed).
+PUT /api/tasks/{id} – Update a task (e.g., status or details).
+DELETE /api/tasks/{id} – Delete a task.
+Kafka Topics:
+
+Topic: task-notifications.
+Messages sent: task_id, status, title, due_date, and timestamp.
+Database Schema:
+
+sql
+Copy code
+CREATE TABLE tasks (
+    task_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    assigned_to VARCHAR(255),
+    due_date DATE,
+    status VARCHAR(50),
+    priority VARCHAR(50)
+);
+Testing:
+
+Test task creation and status updates using Postman or Swagger.
+Write unit and integration tests for critical functionalities.
+Sample Use Case Scenarios
+A team member creates a new task to be completed by the design team with a due_date of tomorrow and a priority of High.
+A manager updates the task status to In Progress and then to Completed.
+Notifications about task creation and status updates are logged and sent using Kafka.
+A batch of overdue tasks is processed to send reminders to assigned users using multithreading.
+Why This Project?
+This Task Management System:
+
+Simulates a real-world collaborative environment.
+Covers a wide range of concepts such as REST APIs, Kafka, multithreading, and exception handling.
+Can easily be extended to include more features like user management, role-based access control, or reporting.
