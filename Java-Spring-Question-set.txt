@@ -1,0 +1,80 @@
+Core Java :
+	What are the four principles of OOP? Can you give examples for each?
+	What is the difference between ArrayList and LinkedList?
+	How does Java handle memory management (Garbage Collection)?
+	What are final, finally, and finalize in Java?
+	Explain the difference between HashMap and Hashtable.
+	What is the difference between HashSet and TreeSet?
+	How does HashMap work internally? Explain with the concept of hashing.
+	What are fail-fast and fail-safe iterators?
+	Explain the Heap and Stack in Java.
+	What are strong, weak, soft, and phantom references in Java?
+	How can memory leaks happen in Java?
+	What is the difference between String, StringBuilder, and StringBuffer?
+	How do you handle immutability in Java?
+	What is a Comparator vs Comparable?
+
+
+Spring Boot & REST API:
+	What are the key features of Spring Boot? Why is it preferred over Spring?
+	Explain the use of @SpringBootApplication annotation.
+	What is the difference between @Component, @Service, and @Repository?
+	How do you handle file uploads in Spring Boot?
+	How do you version REST APIs?
+	ow does Spring Boot's autoconfiguration work?
+	What is the purpose of the application.properties file?
+	How can you customize the embedded Tomcat server in Spring Boot?
+	What is the difference between @RestController and @Controller?
+	How do you handle exceptions in Spring Boot?
+	Follow-up: Can you explain @ControllerAdvice?
+	How do you secure REST APIs in Spring Boot?
+	Explain the lifecycle of a Spring Bean.
+	Can you create a simple endpoint in Spring Boot that accepts a POST request with JSON data?
+	How do you implement caching in Spring Boot?
+	How does Spring Boot handle asynchronous requests?
+	What is a Circuit Breaker pattern, and how do you implement it in Spring Boot?
+
+
+
+SQL & JPA:
+	What is the difference between INNER JOIN, LEFT JOIN, and FULL JOIN?
+	What is the difference between @Entity and @Table annotations?
+	How do you define one-to-one and one-to-many relationships in JPA?
+	Write a simple SQL query to fetch all records where a column value is greater than X.
+	What is the use of @Query in Spring Data JPA?
+	How do you handle transactions in Spring Boot?
+	Explain the concept of indexing in databases.
+	How do you optimize an SQL query for performance?
+	What is the difference between @OneToOne, @OneToMany, and @ManyToMany
+	How do you implement cascading in JPA?
+	xplain the use of FetchType.LAZY and FetchType.EAGER.
+	What is the role of @Transactional in Spring Boot?
+	Explain isolation levels in transactions. Why are they important?
+	How do you handle rollbacks in Spring Boot?
+
+
+Exception Handling:
+	What is the difference between checked and unchecked exceptions?
+	How does try-with-resources work in Java?
+	How do you create custom exceptions in Java?
+	What is the use of @ExceptionHandler annotation?
+	How do you handle global exceptions in Spring Boot?
+	Explain how @ControllerAdvice and @RestControllerAdvice differ.
+	What are the common pitfalls to avoid in exception handling?
+	How do you design meaningful error messages in REST APIs?
+
+Multithreading:
+	What is the difference between Runnable and Callable interfaces?
+	How does the synchronized keyword work in Java?
+	What is a ThreadLocal in Java?
+	Explain the role of ExecutorService in Java.
+	What is a CountDownLatch and how does it work?
+	Explain the difference between ConcurrentHashMap and HashMap.
+	What are the differences between notify(), notifyAll(), and wait()?
+	How does the Fork/Join framework work in Java?
+	What are the benefits of using the CompletableFuture API?
+
+
+HLD : 
+	
+LLD : 

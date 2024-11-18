@@ -5,7 +5,7 @@ import DTO.BookingSlip;
 import java.util.*;
 import Enum.VehicleType;
 
-
+@Componect
 public class ParkingLot {
     int noOfFloor= 0;
     Scanner scanner = new Scanner(System.in);
