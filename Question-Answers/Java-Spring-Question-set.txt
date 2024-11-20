@@ -1,18 +1,34 @@
 Core Java :
 	What are the four principles of OOP? Can you give examples for each?
+		: https://www.geeksforgeeks.org/four-main-object-oriented-programming-concepts-of-java
 	What is the difference between ArrayList and LinkedList?
+		: https://www.javatpoint.com/difference-between-arraylist-and-linkedlist
 	How does Java handle memory management (Garbage Collection)?
+		: https://medium.com/@perspectivementor/java-memory-management-and-garbage-collection-fdf227569a61
 	What are final, finally, and finalize in Java?
+		: https://www.javatpoint.com/difference-between-final-finally-and-finalize
 	Explain the difference between HashMap and Hashtable.
+		: https://www.geeksforgeeks.org/differences-between-hashmap-and-hashtable-in-java/
 	What is the difference between HashSet and TreeSet?
+		: https://www.geeksforgeeks.org/hashset-vs-treeset-in-java/
 	How does HashMap work internally? Explain with the concept of hashing.
+		: https://www.geeksforgeeks.org/internal-working-of-hashmap-java/
 	What are fail-fast and fail-safe iterators?
+		: https://www.geeksforgeeks.org/fail-fast-fail-safe-iterators-java/
 	Explain the Heap and Stack in Java.
+		: https://www.javatpoint.com/stack-vs-heap-java
 	What are strong, weak, soft, and phantom references in Java?
+		: https://medium.com/@davoud.badamchi/explain-strong-weak-soft-and-phantom-references-in-java-their-roles-in-garbage-collection-and-af856ec9257f#:~:text=Strong%20References%3A%20Prevent%20objects%20from,you%20prefer%20to%20retain%20objects.
 	How can memory leaks happen in Java?
+		: How can memory leaks happen in Java?
 	What is the difference between String, StringBuilder, and StringBuffer?
+		: https://www.geeksforgeeks.org/string-vs-stringbuilder-vs-stringbuffer-in-java/
 	How do you handle immutability in Java?
+		: https://www.geeksforgeeks.org/create-immutable-class-java/
 	What is a Comparator vs Comparable?
+		: What is a Comparator vs Comparable?
+	What is Java Memory Model?
+		: https://medium.com/platform-engineer/understanding-java-memory-model-1d0863f6d973
 
 
 Spring Boot & REST API:
@@ -73,6 +89,12 @@ Multithreading:
 	What are the differences between notify(), notifyAll(), and wait()?
 	How does the Fork/Join framework work in Java?
 	What are the benefits of using the CompletableFuture API?
+
+MISC / Extra : 
+	https://www.youtube.com/watch?v=PwiuAebCruY&list=PLyHJZXNdCXscoyL5XEZoHHZ86_6h3GWE1
+	https://www.youtube.com/watch?v=cJOaj2sAxJI
+
+Ultimate Preparetion : https://topmate.io/genzcareer/930954
 
 
 HLD : 
