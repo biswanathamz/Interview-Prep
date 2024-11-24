@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2197b67-87f1-45e7-bb51-a515ff3533ae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../BST/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BST/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BST/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BST/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BST/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BST/BST.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BST/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Question-Answers/Java-Spring-Question-set.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Question-Answers/Java-Spring-Question-set.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +30,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "parking-lot-lld",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
