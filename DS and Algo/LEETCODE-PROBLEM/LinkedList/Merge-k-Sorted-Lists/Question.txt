@@ -36,5 +36,59 @@ lists[i] is sorted in ascending order.
 The sum of lists[i].length will not exceed 104.
 
 
-Solution : 
+Solution 1: 
+
+class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        ListNode returnNode = new ListNode();
+        ListNode cur = returnNode;
+        int count = 0;
+        while (true){
+            int index = -1; 
+            ListNode tempNode = null; 
+            boolean found = false; 
+            for (int i = 0; i < lists.length; i++) {
+                if (lists[i] != null) {
+                    if (tempNode == null || lists[i].val < tempNode.val) {
+                        tempNode = lists[i];
+                        index = i;
+                    }
+                    found = true; 
+                }
+            }
+            if (!found) {
+                break;
+            }
+            cur.next = tempNode;
+            cur = cur.next;
+            lists[index] = lists[index].next;
+        }
+        return returnNode.next;
+    }
+}
+
+
+Solution 2 : Using minHeap
+
+class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        PriorityQueue<ListNode> minHeap= new PriorityQueue<>((a,b)->a.val-b.val);
+        for (ListNode node : lists){
+            if(node!=null)
+                minHeap.add(node);
+        }
+        ListNode returnHead = new ListNode();
+        ListNode current = returnHead;
+        while(!minHeap.isEmpty()){
+            ListNode tempNode = minHeap.poll();
+            current.next = tempNode;
+            current = current.next;
+            tempNode = tempNode.next;
+            if(tempNode!=null){
+                minHeap.add(tempNode);
+            }
+        }
+        return returnHead.next;
+    }
+}
 
