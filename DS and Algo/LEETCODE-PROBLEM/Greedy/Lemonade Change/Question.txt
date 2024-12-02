@@ -27,3 +27,32 @@ For the last customer, we can not give the change of $15 back because we only ha
 Since not every customer received the correct change, the answer is false.
 
 Solution : 
+class Solution {
+    public boolean lemonadeChange(int[] bills) {
+        int fiveDollerCount = 0;
+        int tenDollerCount = 0;
+        int restAmount = 0;
+        for (int bill : bills){
+            if(bill==5){
+                fiveDollerCount += 1;
+            }else if(bill==10){ 
+                if(fiveDollerCount>0){
+                    fiveDollerCount -= 1;
+                    tenDollerCount += 1;
+                }else{
+                    return false;
+                }
+            }else{
+                if(fiveDollerCount>0 && tenDollerCount>0){
+                    fiveDollerCount -= 1;
+                    tenDollerCount -= 1;
+                }else if(fiveDollerCount>=3){
+                    fiveDollerCount -= 3;
+                }else{
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
