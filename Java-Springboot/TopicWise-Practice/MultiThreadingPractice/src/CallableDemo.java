@@ -11,7 +11,7 @@ public class CallableDemo implements Callable<Long> {
     @Override
     public Long call() throws Exception {
         for (int i=0; i<5; i++){
-            System.out.println("Executing in Runnable | callableDemoIdentification : "+this.runnableDemoIdentification);
+            System.out.println("Executing in Callable | callableDemoIdentification : "+this.runnableDemoIdentification);
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {

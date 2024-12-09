@@ -2,7 +2,6 @@ import java.util.*;
 
 interface Demo{
     public void demonstrate();
-    public void streamDemonstrate();
 }
 
 class DemoArrayList implements Demo {
@@ -20,10 +19,6 @@ class DemoArrayList implements Demo {
         this.arrayList.remove(1);
         System.out.println("Printing Array List after removing one element: ");
         this.arrayList.forEach(n-> System.out.println(n));
-    }
-
-    @Override
-    public void streamDemonstrate(){
     }
 }
 
@@ -48,11 +43,6 @@ class DemoLinkedList implements Demo{
             System.out.println(" Element : "+ element);
         }
     }
-
-    @Override
-    public void streamDemonstrate() {
-
-    }
 }
 
 class DemoStack implements Demo{
@@ -71,23 +61,30 @@ class DemoStack implements Demo{
         System.out.println(this.stack.pop());
         System.out.println(this.stack.pop());
     }
-
-    @Override
-    public void streamDemonstrate() {
-
-    }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Demo demoArrayList = new DemoArrayList();
+//        Demo demoArrayList = new DemoArrayList();
 //        demoArrayList.demonstrate();
-//        demoArrayList.streamDemonstrate();
-        Demo demoLinkedList = new DemoLinkedList();
+//        Demo demoLinkedList = new DemoLinkedList();
 //        demoLinkedList.demonstrate();
-//        demoLinkedList.streamDemonstrate();
-        Demo demoStack = new DemoStack();
+//        Demo demoStack = new DemoStack();
 //        demoStack.demonstrate();
-//        demoStack.streamDemonstrate();
+
+        // Stream API Practice
+        StreamPractice streamPractice = new StreamPractice();
+
+        ArrayList<Integer> arrayListForEvenNumbers = new ArrayList<>(Arrays.asList(1,4,2,3,7,5,9,11,8,12));
+        System.out.println("Finding even number over : "+arrayListForEvenNumbers+" are : ");
+        System.out.println(streamPractice.FindEvenNumbers(arrayListForEvenNumbers));
+
+        ArrayList<Integer> arrayListForMaxNumber = new ArrayList<>(Arrays.asList(1,4,2,3,7,5,9,11,8,12));
+        System.out.println("Max number over : "+arrayListForMaxNumber+" are : ");
+        System.out.println(streamPractice.FindMaxNumber(arrayListForMaxNumber));
+
+        ArrayList<Integer> arrayListForSum = new ArrayList<>(Arrays.asList(1,4,2,3,7,5,9,11,8,12,1));
+        System.out.println("Finding sum over : "+arrayListForSum+" are : ");
+        System.out.println(streamPractice.FindSum(arrayListForSum));
     }
 }
