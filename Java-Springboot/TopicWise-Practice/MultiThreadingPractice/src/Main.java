@@ -6,19 +6,22 @@ public class Main {
         //Runnable Example
 
 //        System.out.println("Runnable Started");
+            // Using Traditional Approach
+//            Thread thread1 = new Thread(new RunnableDemo(1));
+//            Thread thread2 = new Thread(new RunnableDemo(2));
 //
-//        Runnable runnableDemoA = new RunnableDemo("A");
-//        Runnable runnableDemoB = new RunnableDemo("B");
+//            thread1.start();
+//            thread2.start();
 //
-//        Thread thread1 = new Thread(runnableDemoA);
-//        Thread thread2 = new Thread(runnableDemoB);
-//
-//        thread1.start();
-//        thread2.start();
-//
-//        thread1.join();
-//        thread2.join();
-//
+//            thread1.join();
+//            thread2.join();
+
+            // Using Executor Approach
+//            ExecutorService executors = Executors.newFixedThreadPool(2);
+//            for (int i=0; i<10; i++){
+//                executors.execute(new RunnableDemo(i));
+//            }
+//            executors.shutdown();
 //        System.out.println("Runnable Finished");
 
         //Callable Example

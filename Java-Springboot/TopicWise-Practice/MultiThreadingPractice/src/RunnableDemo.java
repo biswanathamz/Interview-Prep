@@ -1,21 +1,19 @@
 
 public class RunnableDemo implements Runnable{
 
-    String runnableDemoIdentification;
+    int taskId;
 
-    public  RunnableDemo (String runnableDemoIdentification){
-        this.runnableDemoIdentification = runnableDemoIdentification;
+    public  RunnableDemo (int taskId){
+        this.taskId = taskId;
     }
 
     @Override
     public void run() {
-            for (int i=0; i<5; i++){
-                System.out.println("Executing in Runnable | runnableDemoIdentification : "+this.runnableDemoIdentification);
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+        System.out.println("Executing in Runnable | Task ID  : "+this.taskId+" | Thread Id :"+Thread.currentThread().getName());
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
