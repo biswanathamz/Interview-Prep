@@ -42,8 +42,24 @@ public class Main {
 //        semaphoreDemo.demo();
 
         //CountDownLatch Demo
-//        System.out.println("CountDownLatchDemo Demo : ");
+//        System.out.println("CountDownLatch Demo : ");
 //        CountDownLatchDemo countDownLatchDemo = new CountDownLatchDemo();
 //        countDownLatchDemo.demo();
+
+        //CyclicBarrier Demo
+//        System.out.println("CyclicBarrier Demo : ");
+//        CyclicBarrierExample cyclicBarrierExample = new CyclicBarrierExample();
+//        cyclicBarrierExample.demo();
+
+        //Exchanger Demo
+//        System.out.println("Exchanger Demo : ");
+//        ExchangerExample exchangerExample = new ExchangerExample();
+//        exchangerExample.demo();
+
+        //Phaser Demo
+//        System.out.println("Phaser Demo : ");
+//        PhaserExample phaserExample = new PhaserExample();
+//        phaserExample.demo();
+
     }
 }
