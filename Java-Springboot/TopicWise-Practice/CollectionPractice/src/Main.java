@@ -65,6 +65,7 @@ class DemoStack implements Demo{
 
 public class Main {
     public static void main(String[] args) {
+        // Collection Practice
 //        Demo demoArrayList = new DemoArrayList();
 //        demoArrayList.demonstrate();
 //        Demo demoLinkedList = new DemoLinkedList();
@@ -74,6 +75,8 @@ public class Main {
 
         // Stream API Practice
         StreamPractice streamPractice = new StreamPractice();
+
+        ParallelStreamPractice parallelStreamPractice = new ParallelStreamPractice();
 
         ArrayList<Integer> arrayListForEvenNumbers = new ArrayList<>(Arrays.asList(1,4,2,3,7,5,9,11,8,12));
         System.out.println("Finding even number over : "+arrayListForEvenNumbers+" are : ");
@@ -86,5 +89,34 @@ public class Main {
         ArrayList<Integer> arrayListForSum = new ArrayList<>(Arrays.asList(1,4,2,3,7,5,9,11,8,12,1));
         System.out.println("Finding sum over : "+arrayListForSum+" are : ");
         System.out.println(streamPractice.FindSum(arrayListForSum));
+
+        ArrayList<Integer> arrayListForFindCountOfGreaterThan3000 = new ArrayList<>(Arrays.asList(3000,300,3000,2000,10000,3000));
+        System.out.println("Finding count of 3000 over : "+arrayListForFindCountOfGreaterThan3000+" are : ");
+        System.out.println(streamPractice.findCountOfGreaterThan3000(arrayListForFindCountOfGreaterThan3000));
+
+        ArrayList<String> varFindStrWhoseLengthGreaterThan3 = new ArrayList<>(Arrays.asList("Birds","Cat","Dog","Elephant"));
+        System.out.println("Finding String whose length is more than 3| String List : "+varFindStrWhoseLengthGreaterThan3+" Result is  : ");
+        System.out.println(streamPractice.findStrWhoseLengthGreaterThan3(varFindStrWhoseLengthGreaterThan3));
+
+        ArrayList<String> varStringChangeToLower = new ArrayList<>(Arrays.asList("BiRdS","CAT","Dog","ElepHaNt"));
+        System.out.println("Converting Strings to lower case| String List : "+varStringChangeToLower+" Result is  : ");
+        List<String> resultStr = streamPractice.stringChangeToLower(varStringChangeToLower);
+        System.out.println(resultStr);
+
+        ArrayList<String> varFindCountOfEachStartingElement = new ArrayList<>(Arrays.asList("apple", "banana", "avocado", "blueberry", "cherry", "apricot", "carrot","potato","chili"));
+        System.out.println("Counting the First letter of each String| String List : "+varFindCountOfEachStartingElement+" Result is  : ");
+        System.out.println(streamPractice.findCountOfEachStartingElement(varFindCountOfEachStartingElement));
+
+        ArrayList<Integer> arrayListForParallelSquareOperation = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8));
+        System.out.println("Square operation over : "+arrayListForParallelSquareOperation+" are : ");
+        System.out.println(parallelStreamPractice.computeSquares(arrayListForParallelSquareOperation));
+
+        ArrayList<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee("Ram",1000));
+        employeeList.add(new Employee("Arun",2000));
+        employeeList.add(new Employee("Sham",1400));
+        employeeList.add(new Employee("Pravin",900));
+        System.out.println("Finding second highest salary among"+employeeList+" is : ");
+        streamPractice.findSecondHighestSalary(employeeList).ifPresentOrElse(System.out::println,()-> System.out.println("Second Highest Salary not present"));
     }
 }
