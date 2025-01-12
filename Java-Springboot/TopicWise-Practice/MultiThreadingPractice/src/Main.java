@@ -7,7 +7,7 @@ public class Main {
 
         //Runnable Example
 
-//        System.out.println("Runnable Started");
+        System.out.println("Runnable Started");
             // Using Traditional Approach
 //            Thread thread1 = new Thread(new RunnableDemo(1));
 //            Thread thread2 = new Thread(new RunnableDemo(2));
@@ -25,8 +25,15 @@ public class Main {
 //            thread3.join();
 
             // Using Executor Approach
-            ExecutorService executors = Executors.newFixedThreadPool(2);
-            ThreadPoolExecutor
+//            ExecutorService executors = Executors.newFixedThreadPool(2);
+            class customThreadFactory implements ThreadFactory{
+
+                @Override
+                public Thread newThread(Runnable runnable) {
+                    return new Thread(runnable);
+                }
+            }
+            ThreadPoolExecutor executors = new ThreadPoolExecutor(2, 4, 10, TimeUnit.MINUTES, new ArrayBlockingQueue<>(20),new customThreadFactory());
             for (int i=0; i<10; i++){
                 executors.execute(new RunnableDemo(i));
             }
