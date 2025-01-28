@@ -1,17 +1,22 @@
 ►Dynamic Programming (45 Problems)
 https://lnkd.in/gHYgRDSZ
 
-►Greedy Algorithms (34 Problems)
-https://lnkd.in/gianQPuw
+►Linked List (13 Problems)
+https://lnkd.in/gT_FhqYa
 
 ►Graphs (32 Problems)
 https://lnkd.in/gcHRz5-p
 
+►Heaps (22 Problems)
+https://lnkd.in/gNsjGw8p
+
+►Greedy Algorithms (34 Problems)
+https://lnkd.in/gianQPuw
+
+
 ►Backtracking (17 Problems)
 https://lnkd.in/gersVnrz
 
-►Linked List (13 Problems)
-https://lnkd.in/gT_FhqYa
 
 ►Bit Manipulation (21 Problems)
 https://lnkd.in/gtZZc6tR
@@ -46,8 +51,6 @@ https://lnkd.in/gDqU7Ypy
 ►Monotonic Queue and Priority Queue (13 Problems)
 https://lnkd.in/gzrcfZtj
 
-►Heaps (22 Problems)
-https://lnkd.in/gNsjGw8p
 
 ►Trees (Top 26 Problems)
 https://lnkd.in/g5vXWFu3
