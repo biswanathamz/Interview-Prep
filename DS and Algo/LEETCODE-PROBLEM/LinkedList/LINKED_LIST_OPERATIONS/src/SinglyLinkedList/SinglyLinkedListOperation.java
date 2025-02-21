@@ -1,7 +1,8 @@
 package SinglyLinkedList;
 
 public class SinglyLinkedListOperation {
-    public SinglyListNode append(SinglyListNode head, int data){
+
+    public void append(SinglyListNode head, int data){
         SinglyListNode newNode = new SinglyListNode(data);
 
         SinglyListNode dummyNode = head;
@@ -12,16 +13,36 @@ public class SinglyLinkedListOperation {
 
         dummyNode.next = newNode;
 
-        return head;
     }
 
     public void printList(SinglyListNode head){
         SinglyListNode dummyNode = head;
-        while (dummyNode.next!=null){
+        while (dummyNode!=null){
             System.out.print(dummyNode.value);
             System.out.print("→");
             dummyNode = dummyNode.next;
         }
-        System.out.print("NULL");
+        System.out.println("NULL");
+    }
+
+    public void deleteNthNodeFromLast(SinglyListNode head, int n){
+        // Tutorial : https://www.youtube.com/watch?v=XVuQxVej6y8
+        SinglyListNode dummyNode = new SinglyListNode(0);
+        dummyNode.next = head;
+
+        SinglyListNode leftNode = dummyNode;
+        SinglyListNode rightNode = head;
+
+        for (int i=0; i<n; i++){
+            rightNode = rightNode.next;
+        }
+
+        while (rightNode!=null){
+            leftNode = leftNode.next;
+            rightNode = rightNode.next;
+        }
+
+        assert leftNode.next != null;
+        leftNode.next = leftNode.next.next;
     }
 }
