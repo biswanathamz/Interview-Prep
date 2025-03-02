@@ -8,8 +8,8 @@ public class Main {
 //        runnableDemo.demo();
 
         // Callable Example
-        CallableDemo callableDemo = new CallableDemo();
-        callableDemo.demo();
+//        CallableDemo callableDemo = new CallableDemo();
+//        callableDemo.demo();
 
     }
 }
