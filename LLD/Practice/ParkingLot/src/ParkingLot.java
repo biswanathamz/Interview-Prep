@@ -21,6 +21,7 @@ public class ParkingLot {
         this.floors = new ArrayList<>();
         this.slipMap = new HashMap<>();
         this.noOfFloor = 0;
+        this.createParkingLot();
     }
 
     public void createParkingLot(){
