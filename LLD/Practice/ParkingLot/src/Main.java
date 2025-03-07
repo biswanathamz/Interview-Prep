@@ -1,5 +1,3 @@
-import Component.ParkingLot;
-
 import java.util.Scanner;
 
 public class Main {

@@ -12,8 +12,6 @@ public class Main {
         directory.add(new Directory("Bengali"));
         directory.add(new Directory("English"));
 
-
-
         directory.ls();
     }
 }
